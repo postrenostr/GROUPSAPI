@@ -85,9 +85,11 @@
     navigate("/notes")
   }
 
+  // Follow Group's Users
   const followUsers = async () => {
     for (let i = 0; i < fgroups.length; i++) {
       const group = fgroups[i];
+      // Get group's users
       const res = await fetch("https://manyworlds.network:3306/groups/" + group, {
         method: "GET",
         headers: {

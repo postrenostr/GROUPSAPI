@@ -13,6 +13,7 @@
   let loading = true
 
   onMount(async () => {
+    // Get groupnames
     const gres = await fetch("https://manyworlds.network:3306/groups", {
       method: "GET",
       headers: {
